@@ -13,7 +13,8 @@ public partial class Question : System.Web.UI.Page
     public SqlDataReader r,rs;
     public void Page_Load(object sender, EventArgs e)
     {
-         con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename='C:\\Users\\Babloo Singh\\Documents\\techcrunch.mdf';Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True");
+        //Add your database string before the string within
+        con = new SqlConnection("MultipleActiveResultSets=True");
         con.Open();
         cmd = new SqlCommand("SELECT [User].Name,Blog.* FROM Blog INNER JOIN [User] ON Blog.UserID = [User].UserID AND BlogID='" + Request.QueryString["id"] + "' ", con);
         r = cmd.ExecuteReader();

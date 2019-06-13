@@ -16,7 +16,8 @@ public partial class Default2 : System.Web.UI.Page
         {
             Response.Redirect("/");
         }
-        con = new SqlConnection("Data Source=(LocalDB)\\v11.0;AttachDbFilename='C:\\Users\\Babloo Singh\\Documents\\techcrunch.mdf';Integrated Security=True;Connect Timeout=30");
+        //Add your database string here
+        con = new SqlConnection("");
         con.Open();
     }
    
